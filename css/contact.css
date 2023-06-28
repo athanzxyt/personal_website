@@ -1,0 +1,82 @@
+#text {
+    background-color: black;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text div {
+    text-align: center;
+    margin: 5% 0% 5% 0%;
+}
+
+#text-top {
+    font-family: 'Roxborough CF', serif;
+    font-style: italic;
+    font-size: 6vw;
+    color: white;
+    line-height: 0.9;
+    font-weight: 250;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-bottom {
+    font-family: 'Arial', sans-serif;
+    font-size: 6vw;
+    color: white;
+    line-height: 0.9;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact {
+    margin: 20px 0px 10px 0px;
+    height: 50vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+}
+
+#info {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    grid-gap: 20px;
+}
+
+.details h1 {
+    font-family: 'Roxborough CF', serif;
+    font-size: 30px;
+    color: black;
+    line-height: 0.9;
+    font-weight: 250;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.links h1 {
+    font-family: 'Roxborough CF', serif;
+    font-size: 30px;
+    color: black;
+    line-height: 0.9;
+    font-weight: 250;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+
+.form h1 {
+    font-family: 'Roxborough CF', serif;
+    font-size: 50px;
+    color: black;
+    line-height: 0.9;
+    font-weight: 250;
+    align-items: center;
+    justify-content: center;
+}
