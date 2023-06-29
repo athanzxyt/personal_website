@@ -12,26 +12,56 @@
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="works.html">Works</a></li>
-            <li><a href="playground.html">Playgound</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Navbar -->
+    <script id="replace_with_navbar" src="../js/nav.js"></script>
 
-    <!-- Text -->
-    <section id="text">
+    <div class="contact-box">
+        <div class="top-text">
+            FOR ANY ENQUIRY <br>
+            OR JUST TO SAY HI <br>
+            FEEL FREE TO REACH OUT
+        </div>
+        <div class="contact-links">
+            asdf
+        </div>
+        <div class="bottom-text">
+            I'M ALL EARS
+        </div>
+    </div>
+
+    <div class="text-circ-1">
+        <h1 id="circ-1">LET'S COLLABORATE  GET THINGS DONE  MAKE GOOD SH*T  WORK TOGETHER  GET IN TOUCH  </h1>
+    </div>
+
+    <div class="text-circ-2">
+        <h1 id="circ-2">SHARE AN IDEA    SAY HELLO     ASK TO TALK    SHARE AN IDEA    SAY HELLO     ASK TO TALK    </h1>
+    </div>
+
+    <script>
+        const text = document.getElementById('circ-1');
+        text.innerHTML = text.innerText.split("").map(
+            (char , i) =>
+            `<span style="transform:rotate(${i * 4.57}deg)">${char}</span>`
+        ).join("");
+    </script>
+
+    <script>
+        const text2 = document.getElementById('circ-2');
+        text2.innerHTML = text2.innerText.split("").map(
+            (char , i) =>
+            `<span style="transform:rotate(${i * 5}deg)">${char}</span>`
+        ).join("");
+    </script>
+
+    <!-- <section id="text">
         <div>
             <h1 id="text-top">Get In Touch</h1>
             <h1 id="text-bottom">And Get Sh*t Done</h1>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact -->
-    <section id="contact">
+    <!-- <section id="contact">
         <div id="info">
             <div class="details">
                 <h1>Details</h1>
@@ -60,5 +90,5 @@
               <input type="submit" value="Submit">
             </form> 
         </div>
-    </section>
+    </section> -->
 </body>

@@ -1,5 +1,82 @@
-#text {
+.contact-box {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 700px;
+    height: 300px;
+}
+
+.top-text {
+    font-family: 'Roxborough CF', serif;
+    font-size: 1.5em;
+}
+
+.contact-links {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    background-color: green;
+}
+
+.bottom-text {
+}
+
+.text-circ-1 {
+    position: absolute;
+    top: -50%;
+    left: 15%;
+    width: 1400px;
+    height: 1400px;
+    animation: rotateText 40s linear infinite;
+    z-index: -1;
+
+}
+
+.text-circ-2 {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    width: 600px;
+    height: 600px;
+    animation: rotateText 30s linear infinite;
+    z-index: -1;
+}
+
+.text-circ-1 span {
+    font-family: 'Roxborough CF', serif;
+    position: absolute;
+    left: 50%;
+    font-size: 1.8em;
+    transform-origin: 0 700px;
+    color: var(--highlight-red);
+
+}
+
+.text-circ-2 span {
+    font-family: 'Roxborough CF', serif;
+    position: absolute;
+    left: 50%;
+    font-size: 0.8em;
+    transform-origin: 0 300px;
+    color: var(--highlight-red);
+}
+
+@keyframes rotateText {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+/* #text {
     background-color: black;
+    border-radius: 30px;
     height: 40vh;
     width: 100%;
     display: flex;
@@ -79,4 +156,4 @@
     font-weight: 250;
     align-items: center;
     justify-content: center;
-}
+} */
