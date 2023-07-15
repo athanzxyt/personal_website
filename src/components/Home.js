@@ -12,10 +12,10 @@ const Home = () => {
         </div>
         <div id="landing-nav">
             <ul>
-                <li><a href="/about">ABOUT</a></li>
-                <li><a href="/works">WORKS</a></li>
-                <li><a href="/playground">PLAYGROUND</a></li>
-                <li><a href="/contact">CONTACT</a></li>
+                <li><a href="/#/about">ABOUT</a></li>
+                <li><a href="/#/works">WORKS</a></li>
+                <li><a href="/#/playground">PLAYGROUND</a></li>
+                <li><a href="/#/contact">CONTACT</a></li>
             </ul>
         </div>
         <div className="side" id="version">
