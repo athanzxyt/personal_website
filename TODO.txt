@@ -1,7 +1,6 @@
 - Front page FBO particles animation
 (https://www.youtube.com/watch?v=3SJIPjlSjtM&ab_channel=YuriArtiukh)
 
-- Footer (Local Time, Social Medias, Get in Touch)
 - Finish grid layout for Works section
 - Finish importing fonts
 - Preloader for each page
