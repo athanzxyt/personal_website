@@ -1,28 +1,23 @@
-name: Build and Deploy Website
-
+---
+name: Portfolio v2
 on:
   push:
     branches: [ main ]
-
 jobs:
-  build:
+  build-and-deploy: 
+    name: Build and Deploy
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout
       uses: actions/checkout@v2
-
-    - name: Install dependencies
+    
+    - name: Build
       run: npm install
 
-    - name: Build website
-      run: npm run build
-
-    - name: Create branch for built website
+    - name: Deploy
       run: |
-        git config --global user.name "athanzxyt"
-        git config --global user.email "athanzxyt@gmail.com"
-        git checkout -b deploy
-        git add .
-        git commit -m "Built website"
-        git push origin deploy
+        git config --global user.name 'athanzxyt'
+        git config --global user.email 'athanzxyt@gmail.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        npm run deploy
