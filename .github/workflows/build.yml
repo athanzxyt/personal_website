@@ -1,0 +1,29 @@
+name: Build and Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build website
+      run: npm run build
+
+    - name: Create branch for built website
+      run: |
+        git config --global user.name "athanzxyt"
+        git config --global user.email "athanzxyt@gmail.com"
+        git checkout -b deploy
+        git add .
+        git commit -m "Built website"
+        git push origin deploy

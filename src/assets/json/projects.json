@@ -1,0 +1,57 @@
+{
+    "ML Basics": {
+        "desc": "A from-scratch implementation of standard machine learning algorithms with in-depth documentation on the theory behind them.",
+        "tools": "Jupyter Notebook, Pandas, Numpy, NLTK, SKLearn",
+        "imagePath": "./NLP.png",
+        "link": "https://github.com/ElemelonWind/sentiment-classifier"
+    },
+    "t-SNE Classification": {
+        "desc": "Project using t-SNE as a pre-processing step for ML classification.        ",
+        "tools": "Jupyter Notebook, Pandas, Numpy, NLTK, SKLearn",
+        "imagePath": "./NLP.png",
+        "link": "https://github.com/ElemelonWind/sentiment-classifier"
+    },
+    "Quantum Crypto Anomaly Detection": {
+        "desc": "Using QVR VQA to classify anomalies in cryptocurrency time-series data.        ",
+        "tools": "Jupyter Notebook, Pandas, Numpy, NLTK, SKLearn",
+        "imagePath": "./NLP.png",
+        "link": "https://github.com/ElemelonWind/sentiment-classifier"
+    },
+    "virginiaHOI": {
+        "desc": "Classification Exploration of Virginia Health Opportunity Index Dataset        ",
+        "tools": "Jupyter Notebook, Pandas, Numpy, NLTK, SKLearn",
+        "imagePath": "./NLP.png",
+        "link": "https://github.com/ElemelonWind/sentiment-classifier"
+    },
+    "ConcioiousCapital": {
+        "desc": "Using Markowitzian Portfolio Allocation Theory and KNN clustering techniques to identify client ESG needs.",
+        "tools": "Jupyter Notebook, Pandas, Numpy, NLTK, SKLearn",
+        "imagePath": "./NLP.png",
+        "link": "https://github.com/ElemelonWind/sentiment-classifier"
+    },
+    "Formula 1 RL": {
+        "desc": "A natural language processing model that finds the sentiment (good or bad) of restaurant reviews.",
+        "tools": "Jupyter Notebook, Pandas, Numpy, NLTK, SKLearn",
+        "imagePath": "./NLP.png",
+        "link": "https://github.com/ElemelonWind/sentiment-classifier"
+    },
+    "VQE": {
+        "desc": "A natural language processing model that finds the sentiment (good or bad) of restaurant reviews.",
+        "tools": "Jupyter Notebook, Pandas, Numpy, NLTK, SKLearn",
+        "imagePath": "./NLP.png",
+        "link": "https://github.com/ElemelonWind/sentiment-classifier"
+    },
+    "Black-Scholes": {
+        "desc": "A natural language processing model that finds the sentiment (good or bad) of restaurant reviews.",
+        "tools": "Jupyter Notebook, Pandas, Numpy, NLTK, SKLearn",
+        "imagePath": "./NLP.png",
+        "link": "https://github.com/ElemelonWind/sentiment-classifier"
+    },
+    "Tungsten-Disulfide": {
+        "desc": "A natural language processing model that finds the sentiment (good or bad) of restaurant reviews.",
+        "tools": "Jupyter Notebook, Pandas, Numpy, NLTK, SKLearn",
+        "imagePath": "./NLP.png",
+        "link": "https://github.com/ElemelonWind/sentiment-classifier"
+    }
+}
+

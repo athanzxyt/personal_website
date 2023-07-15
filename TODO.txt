@@ -1,0 +1,20 @@
+- Front page FBO particles animation
+(https://www.youtube.com/watch?v=3SJIPjlSjtM&ab_channel=YuriArtiukh)
+
+- Footer (Local Time, Social Medias, Get in Touch)
+- Auto deploy to Digital Ocean
+- Finish grid layout for Works section
+- Finish importing fonts
+- Preloader for each page
+
+- In the future, change works section to be animated flipping through cards
+
+- Finish begining of about section
+- create education timeline and professional experience timeline
+- Ask for resume section? Maybe link to just contact form prefilled out
+
+- Playground section should be just a gallery of images with links
+(https://huyml.co/play-ground.html)
+
+- Contact form 
+- Contact should have some type of animation, maybe ascii? maybe sliding text
