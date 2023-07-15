@@ -15,13 +15,14 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Deploy
+    - name: Build website
+      run: npm run build
+
+    - name: Create branch for built website
       run: |
-        git config --global user.name 'athanzxyt'
-        git config --global user.email 'athanzxyt@gmail.com'
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        npm run deploy
-      env: 
-        REACT_APP_SERVICE_ID: ${{ secrets.REACT_APP_SERVICE_ID }}
-        REACT_APP_TEMPLATE_ID: ${{ secrets.REACT_APP_TEMPLATE_ID }}
-        REACT_APP_PUBLIC_KEY: ${{ secrets.REACT_APP_PUBLIC_KEY }}
+        git config --global user.name "athanzxyt"
+        git config --global user.email "athanzxyt@gmail.com"
+        git checkout -b deploy
+        git add .
+        git commit -m "Built website"
+        git push origin deploy
