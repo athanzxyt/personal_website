@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -12,10 +13,10 @@ const Home = () => {
         </div>
         <div id="landing-nav">
             <ul>
-                <li><a href="/about">ABOUT</a></li>
-                <li><a href="/works">WORKS</a></li>
-                <li><a href="/playground">PLAYGROUND</a></li>
-                <li><a href="/contact">CONTACT</a></li>
+                <li><NavLink to="/about">ABOUT</NavLink></li>
+                <li><NavLink to="/works">WORKS</NavLink></li>
+                <li><NavLink to="/playground">PLAYGROUND</NavLink></li>
+                <li><NavLink to="/contact">CONTACT</NavLink></li>
             </ul>
         </div>
         <div className="side" id="version">
