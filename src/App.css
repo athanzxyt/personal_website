@@ -176,18 +176,6 @@ body {
     line-height: 1.5;
 }
 
-@media (min-width: 600px) {
-  .project-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 900px) {
-  .project-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 /* UNIVERSAL NAVBAR */
 
 nav {
@@ -399,4 +387,140 @@ footer p {
   font-size: 3em;
   text-decoration: none;
   color: var(--c2);
+}
+
+.contact-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--pad), 8%;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.contact-form {
+  background-color: var(--c2);
+  padding: 0 calc(var(--pad) * 0.5);
+  border-radius: var(--pad);
+}
+
+.messageForm {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.formInput {
+  margin: calc(var(--pad) * 0.5) 0;
+  position: relative;
+}
+
+.halfWidth {
+  flex-basis: 48%;
+}
+
+.fullWidth {
+  flex-basis: 100%;
+}
+
+.formInput input, .formInput textarea {
+  width: 100%;
+  font-size: 18px;
+  padding: 2px 0px;
+  background: var(--grad-bg);
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans2);
+  color: var(--c1);
+}
+
+.formInput textarea {
+  resize: none;
+  height: 180px;
+  display: block;
+}
+
+textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: var(--c1);
+  border-radius: 5px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--c2);
+  border-radius: 5px;
+}
+
+.formInput label {
+  position: absolute;
+  font-family: var(--font-cool);
+  color: grey;
+  left: 0;
+  bottom: 4px;
+
+  transition: 400ms;
+  pointer-events: none;
+}
+
+.formInput:nth-child(4) label {
+  top: 4px;
+}
+
+.formInput input:focus ~ label, .formInput textarea:focus ~ label,
+.formInput input:valid ~ label, .formInput textarea:valid ~ label  
+{
+  transform: translateY(-25px);
+  font-size: 14px;
+} 
+
+.formInput button {
+  padding: 8px 16px;
+  font-family: var(--font-cool);
+  font-weight: 700;
+  font-size: 18px;
+  background: var(--grad-bg);
+  color: var(--c2);
+  border: 1px solid transparent;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0,0,0,0.3);
+  transition: 500ms
+}
+
+@media (min-width: 600px) {
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .project-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1100px){
+  .formInput .halfWidth {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-row {
+    flex-wrap: wrap;
+  }
 }

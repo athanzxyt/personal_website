@@ -6,8 +6,8 @@ import Works from './components/Works';
 import Playground from "./components/Playground";
 import Contact from "./components/Contact";
 
-
 function App() {
+
   return (
     <HashRouter basename="/">
       <Routes>

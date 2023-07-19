@@ -16,7 +16,7 @@ const Navbar = () => {
             </div>
             <div id="nav-box">
                 <ul>
-                    <li><NavLink to ="/about">ABOUT</NavLink></li>
+                    <li className="magnetic"><NavLink to ="/about">ABOUT</NavLink></li>
                     <li><NavLink to ="/works">WORKS</NavLink></li>
                     <li><NavLink to ="/playground">PLAYGROUND</NavLink></li>
                     <li><NavLink to ="/contact">CONTACT</NavLink></li>
