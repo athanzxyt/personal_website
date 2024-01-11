@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "title": "ML Basics",
+      "description": "A from-scratch implementation of standard machine learning algorithms with in-depth documentation on the theory behind them."
+    },
+    {
+      "id": 2,
+      "title": "t-SNE Classification",
+      "description": "Project using t-SNE as a pre-processing step for ML classification.      "
+    },
+    {
+        "id": 3,
+        "title": "Crypto Quantum Anomaly Detection",
+        "description": "Using QVR VQA to classify anomalies in cryptocurrency time-series data."
+    },
+    {
+        "id": 4,
+        "title": "virginiaHOI",
+        "description": "Classification Exploration of Virginia Health Opportunity Index Dataset"
+    },
+    {
+        "id": 5,
+        "title": "MedMNIST (Computer Vision)",
+        "description": "Using theoretical deep learning continual learning techniques for medical application"
+    },
+    {
+        "id": 6,
+        "title": "ConciousCapital",
+        "description": "Using Markowitzian Portfolio Allocation Theory and KNN clustering techniques to identify client ESG needs. "
+    }
+  ]

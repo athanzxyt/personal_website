@@ -1,0 +1,1 @@
+in App.jsx: Currently have outer box padding to be 5%, make it dynamic.
