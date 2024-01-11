@@ -1,5 +1,5 @@
 ---
-name: Portfolio v2
+name: Portfolio v3
 on:
   push:
     branches: [ main ]
