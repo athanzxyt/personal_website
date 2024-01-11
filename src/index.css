@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  @apply overflow-hidden;
+}
+
+.custom-grad {
+  @apply bg-gradient-to-r from-[#06b178] via-[#a3b32e] to-[#04724d] inline-block text-transparent bg-clip-text;
+}
+
+.nav-item {
+  @apply mr-5 mb-5 text-lg cursor-pointer;
+  @apply bg-gradient-to-r from-[#06b178] via-[#a3b32e] to-[#04724d];
+  border-bottom-width: 0;
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .5s ease-in-out;
+}
+
+.nav-item:hover:not(.active) {
+  opacity: 0.5;
+}
+
+.nav-item.active {
+  background-size: 100% 3px;
+  background-position: 0 100%
+}
