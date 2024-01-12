@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Syne:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -19,8 +19,10 @@ body {
   @apply bg-gradient-to-r from-[#06b178] via-[#a3b32e] to-[#04724d] inline-block text-transparent bg-clip-text;
 }
 
+/* Nav Items */
+
 .nav-item {
-  @apply mr-5 mb-5 text-lg cursor-pointer;
+  @apply mr-5 mb-5 text-lg cursor-pointer font-syne font-bold;
   @apply bg-gradient-to-r from-[#06b178] via-[#a3b32e] to-[#04724d];
   border-bottom-width: 0;
   background-size: 0 3px;
@@ -35,5 +37,20 @@ body {
 
 .nav-item.active {
   background-size: 100% 3px;
-  background-position: 0 100%
+  background-position: 0 100%;
+}
+
+/* Projects Page */
+
+.project-li {
+  @apply bg-gradient-to-r from-transparent from-50% to-[#06b178];
+  right: 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 0 100%;
+  transition: background-size .5s ease-in-out;
+}
+
+.project-li:hover {
+  background-size: 100% 100%;
 }

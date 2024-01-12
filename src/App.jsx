@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="h-screen bg-background p-5">
-        <div className="bg-background border-primary border h-full w-full p-5 pb-0">
+        <div className="bg-background border-primary border h-full w-full p-5">
           <div className="flex flex-col h-full overflow-hidden sm:grid sm:gap-x-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <div className="sm:col-span-1">
               <Header />

@@ -9,10 +9,10 @@ function Home() {
                 <img src="src/assets/pfp2.png" alt="A Picture of Me!" />
             </div>
             <div>
-                <p className="text-md sm:pr-10 sm:absolute sm:bottom-0">
+                <p className="text-md sm:pr-10 sm:absolute sm:bottom-0 font-dm">
                     Working to expand the domain of computation. I'm based 
                     in the greater New York and Washington D.C. areas and 
-                    am currently studying at Princeton University. I have 
+                    am currently studying at Princeton University 🐅. I have 
                     interests in artificial intelligence, quantum computing,
                     and optimization. 
                     <br />

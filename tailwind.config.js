@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'syne': ['Syne', 'sans-serif'],
+        'dm': ['DM Sans', 'sans-serif'],
+      },
       colors: {
         'background': '#e7e7e7', // Mercury
         'primary': '#1a1a1a',
