@@ -5,8 +5,11 @@ import { TypeAnimation } from 'react-type-animation'
 
 function Header() {
     return (
-        <div>
-            <h1 className="text-8xl custom-grad pb-1 font-syne font-bold leading-none">Athan Zhang</h1>
+        <div className="text-center 
+                        sm:text-start">
+            <h1 className="font-syne font-bold custom-grad
+                           text-7xl leading-tight pb-2
+                           sm:text-8xl sm:leading-tight sm:pb-5">Athan Zhang</h1>
             <TypeAnimation
                 sequence={[
                     'I am a Developer',
@@ -17,9 +20,9 @@ function Header() {
                     2000,
                 ]}
                 wrapper="div"
-                speed={10}
+                speed={5}
                 repeat={Infinity}
-                className="pb-10 text-2xl text-primary font-dm font-bold"
+                className="text-lg text-primary font-dm font-bold sm:text-2xl"
             />
         </div>
     )

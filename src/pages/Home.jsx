@@ -4,8 +4,8 @@ import React from 'react'
 
 function Home() {
     return (
-        <div className="grid max-w-[300px] sm:relative">            
-            <div>
+        <div className="grid max-w-full sm:relative">            
+            <div className="max-w-[300px]">
                 <img src="/pfp2.png" alt="A Picture of Me!" />
             </div>
             <div>

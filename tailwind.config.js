@@ -12,9 +12,13 @@ export default {
       },
       colors: {
         'background': '#e7e7e7', // Mercury
+        // 'background': '#ffffff', // Cultured
         'primary': '#1a1a1a',
         'secondary': '#06b178'
       },
+      lineHeight: {
+        'tight': '0.8'
+      }
     },
   },
   plugins: [],

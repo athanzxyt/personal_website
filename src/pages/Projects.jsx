@@ -16,7 +16,7 @@ function Projects() {
         <div className="flex justify-end">
             <ul className="list-none p-0 m-0">
                 {projects.map(project => (
-                <li key={project.id} className="py-5 project-li">
+                <li key={project.id} className="py-8 project-li">
                     <h2 className="text-6xl font-syne font-bold text-right">{project.title}</h2>
                     <p className="text-xl font-dm text-right">{project.description}</p>
                 </li>
