@@ -6,7 +6,7 @@ function Home() {
     return (
         <div className="grid max-w-[300px] sm:relative">            
             <div>
-                <img src="src/assets/pfp2.png" alt="A Picture of Me!" />
+                <img src="/pfp2.png" alt="A Picture of Me!" />
             </div>
             <div>
                 <p className="text-md sm:pr-10 sm:absolute sm:bottom-0 font-dm">
