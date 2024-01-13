@@ -8,7 +8,7 @@ import Contact from '../pages/Contact';
 
 function ContentPanel() {
     return (
-        <div className="flex h-full max-h-full justify-end">
+        <div className="flex w-full max-w-full h-full max-h-full justify-end">
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/projects" element={<Projects />} />
