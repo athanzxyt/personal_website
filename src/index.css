@@ -22,7 +22,7 @@ body {
 /* Nav Items */
 
 .nav-item {
-  @apply m-4 sm:my-1 sm:mx-0 sm:text-base sm:text-lg cursor-pointer font-syne font-bold sm:w-10;
+  @apply m-4 sm:my-1 sm:mx-0 text-sm sm:text-xl cursor-pointer font-syne font-bold sm:w-10;
   @apply bg-gradient-to-r from-[#06b178] via-[#a3b32e] to-[#04724d];
   border-bottom-width: 0;
   background-size: 0 3px;
@@ -52,5 +52,22 @@ body {
 }
 
 .project-li:hover {
+  background-size: 100% 100%;
+}
+
+/* Contact Links */
+
+.contact-link {
+  @apply text-4xl sm:text-8xl font-syne font-bold;
+  background-position: right;
+  background-size: 50% 100%;
+  padding-right: 5%;
+  right: 100%;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.contact-link:hover {
+  @apply bg-gradient-to-r from-[#06b178] via-[#a3b32e] to-[#04724d] text-transparent bg-clip-text;
+  font-style: italic;
   background-size: 100% 100%;
 }
