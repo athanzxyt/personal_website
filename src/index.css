@@ -26,7 +26,7 @@ body {
 /* Nav Items */
 
 .nav-item {
-  @apply m-4 sm:my-1 sm:mx-0 text-sm sm:text-xl cursor-pointer font-syne font-bold sm:w-10;
+  @apply mx-3 my-1 sm:my-1 sm:mx-0 text-sm sm:text-xl cursor-pointer font-syne font-bold sm:w-10;
   @apply bg-gradient-to-r from-[#06b178] via-[#a3b32e] to-[#04724d];
   border-bottom-width: 0;
   background-size: 0 3px;
