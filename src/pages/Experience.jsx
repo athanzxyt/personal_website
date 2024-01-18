@@ -56,7 +56,7 @@ function Experience() {
                 ))}
             </ul>
 
-            <h1 className="text-6xl font-syne font-bold text-left custom-grad pt-6 pb-4">Skills</h1>
+            <h1 className="text-6xl font-syne font-bold text-left custom-grad pt-6 pb-4">test</h1>
 
             <h1 className="text-6xl font-syne font-bold text-left custom-grad pt-6 pb-4">Awards</h1>
             <ul className="list-none p-0 m-0">
