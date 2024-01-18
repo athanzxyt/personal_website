@@ -5,7 +5,7 @@
       "degree": "Bachelor's of Science Engineering",
       "major": "Computer Science & Optimization and Quantitative Decision Science",
       "gpa": "3.9 /4.0",
-      "year": "2023 - 2026",
+      "years": "2023 - 2026",
       "location": "Princeton, NJ"
     },
     {
@@ -14,7 +14,17 @@
       "degree": "Advanced Studies Diploma",
       "major": "Computer Science & Quantum Optics Lab",
       "gpa": "4.7 /4.0",
-      "year": "2019 - 2023",
+      "years": "2019 - 2023",
       "location": "Alexandria, VA"
+    },
+    {
+      "id": 3,
+      "school": "IBM Data Science Professional Certificate",
+      "years": "2021"
+    },
+    {
+      "id": 4,
+      "school": "Qiskit Quantum Excellence Certificate",
+      "years": "2023"
     }
   ]
