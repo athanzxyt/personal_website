@@ -48,7 +48,6 @@ body {
 
 .project-li {
   @apply bg-gradient-to-r from-transparent from-50% to-[#06b178];
-  right: 100%;
   background-repeat: no-repeat;
   background-position: right;
   background-size: 0 100%;

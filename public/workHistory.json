@@ -1,16 +1,23 @@
 [
     {
-      "id": 1,
-      "company": "Alfreds Futterkiste",
-      "title": "Sales Representative",
-      "location": "Berlin",
-      "years": "May 2011 - Present"
+      "id": 2,
+      "company": "Vytal AI",
+      "title": "Founding Engineer",
+      "location": "Remote",
+      "years": "2022 - Present"
     },
     {
-      "id": 2,
-      "company": "Alfreds Futterkiste",
-      "title": "Sales Representative",
-      "location": "Berlin",
-      "years": "May 2011 - Present"
+      "id": 3,
+      "company": "Leidos",
+      "title": "Data Science Intern",
+      "location": "Alexandria, VA",
+      "years": "2023 - 2023"
+    },
+    {
+      "id": 1,
+      "company": "George Mason University",
+      "title": "Deep Learning Intern",
+      "location": "Fairfax, VA",
+      "years": "2022 - 2022"
     }
   ]

@@ -2,17 +2,19 @@
     {
       "id": 1,
       "school": "Princeton University",
-      "degree": "Bachelor's of Science Engineering: Computer Science & Optimization and Quantitative Decision Science",
+      "degree": "Bachelor's of Science Engineering",
+      "major": "Computer Science & Optimization and Quantitative Decision Science",
       "gpa": "3.9 /4.0",
-      "year": "May 2026",
+      "year": "2023 - 2026",
       "location": "Princeton, NJ"
     },
     {
       "id": 2,
-      "school": "Thomas Jefferson HSST",
-      "degree": "Advanced Studies Diploma: Computer Science & Quantum Optics Lab",
+      "school": "Thomas Jefferson High School for Science and Technology",
+      "degree": "Advanced Studies Diploma",
+      "major": "Computer Science & Quantum Optics Lab",
       "gpa": "4.7 /4.0",
-      "year": "June 2023",
+      "year": "2019 - 2023",
       "location": "Alexandria, VA"
     }
   ]
