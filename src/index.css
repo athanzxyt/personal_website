@@ -60,10 +60,20 @@ body {
   background-size: 100% 100%;
 }
 
-/* Contact Links */
+/* Playground Page */
+
+.playground-li {
+  @apply font-syne font-bold text-3xl text-right;
+}
+
+.playground-li:hover {
+  @apply text-secondary;
+}
+
+/* Contact Page */
 
 .contact-link {
-  @apply text-4xl sm:text-8xl font-syne font-bold;
+  @apply text-4xl text-right sm:text-8xl font-syne font-bold;
   background-position: right;
   background-size: 50% 100%;
   padding-right: 5%;
@@ -72,7 +82,8 @@ body {
 }
 
 .contact-link:hover {
-  @apply bg-gradient-to-r from-[#06b178] via-[#a3b32e] to-[#04724d] text-transparent bg-clip-text;
+  /* @apply bg-gradient-to-r from-[#06b178] via-[#a3b32e] to-[#04724d] text-transparent bg-clip-text; */
+  @apply bg-gradient-to-r from-secondary to-secondary text-transparent bg-clip-text;
   font-style: italic;
   background-size: 100% 100%;
 }

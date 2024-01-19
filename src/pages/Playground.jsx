@@ -4,24 +4,17 @@ import React from 'react'
 
 function Playground() {
     return (
-        <div className="grid max-w-full sm:relative">            
-            <div className="max-w-[300px]">
-                <img src="/pfp2.png" alt="A Picture of Me!" />
-            </div>
-            <div>
-                <p className="text-md sm:pr-10 sm:absolute sm:bottom-0 font-dm">
-                    Working to expand the domain of computation. I'm based 
-                    in the greater New York and Washington D.C. areas and 
-                    am currently studying at Princeton University 🐅. I have 
-                    interests in artificial intelligence, quantum computing,
-                    and optimization. 
-                    <br />
-                    <br />
-                    In some shape or form, I've been working on these goals
-                    since I was 15 years old. 
-                </p>
-                
-            </div>
+        <div className="flex h-full justify-end items-end">      
+            <ul className="list-none">
+                <li className="playground-li">
+                    <a href="https://www.youtube.com/watch?v=Ikl_rfML7R8&ab_channel=AnikaR">
+                        My Gastrodiplomacy Documentary
+                    </a>      
+                </li>
+                <li className="playground-li">
+                    <p>Top Show Recommendations</p>
+                </li>
+            </ul>      
         </div>
     )
 }
