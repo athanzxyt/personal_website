@@ -1,6 +1,7 @@
 // Projects.jsx
 
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 function Experience() {
     const [education, setEducation] = useState([]);
@@ -29,7 +30,12 @@ function Experience() {
     }, []);
 
     return (
-        <div className="flex flex-col">
+        <motion.div 
+            className="flex flex-col"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <h1 className="text-4xl sm:text-6xl font-syne font-bold text-left custom-grad pb-4">Education</h1>
             <ul className="list-none p-0 m-0">
                 {education.map(education => (
@@ -132,7 +138,7 @@ function Experience() {
                 ))}
             </ul>
 
-        </div>
+        </motion.div>
     );
 }
 

@@ -1,6 +1,7 @@
 // Home.jsx
 
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 function Home() {
     return (
@@ -27,7 +28,12 @@ function Home() {
         //     </div>
         // </div>
 
-        <div className="flex items-center justify-center h-full">
+        <motion.div 
+            className="flex items-center justify-center h-full"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <img src="/pfp2.png" alt="A Picture of Me!" className="w-1/2 h-3/4 object-cover"/>
             <div className="m-8 w-1/4">
                 <p className="text-xl font-dm">
@@ -49,7 +55,7 @@ function Home() {
                     </span>
                 </p>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

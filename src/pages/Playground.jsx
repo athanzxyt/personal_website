@@ -1,10 +1,16 @@
 // Home.jsx
 
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 function Playground() {
     return (
-        <div className="flex h-full justify-end items-end">      
+        <motion.div 
+            className="flex h-full justify-end items-end"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >      
             <ul className="list-none">
                 <li className="playground-li">
                     <a href="https://www.youtube.com/watch?v=Ikl_rfML7R8&ab_channel=AnikaR">
@@ -15,7 +21,7 @@ function Playground() {
                     <p>Top Show Recommendations</p>
                 </li>
             </ul>      
-        </div>
+        </motion.div>
     )
 }
 
