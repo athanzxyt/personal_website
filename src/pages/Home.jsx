@@ -4,12 +4,12 @@ import React from 'react'
 
 function Home() {
     return (
-        <div className="grid max-w-full sm:relative">            
+        <div className="flex flex-col">            
             <div className="max-w-[300px]">
                 <img src="/pfp2.png" alt="A Picture of Me!" />
             </div>
             <div>
-                <p className="text-md sm:pr-10 sm:absolute sm:bottom-0 font-dm">
+                <p className="text-md font-dm">
                     Working to expand the domain of computation. I'm based 
                     in the greater New York and Washington D.C. areas and 
                     am currently studying at Princeton University 🐅. I have 
