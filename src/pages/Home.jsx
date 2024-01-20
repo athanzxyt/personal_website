@@ -42,7 +42,7 @@ function Home() {
                     </span>
                     <br />
                     <br />
-                    Working to expand the domain of computation. I'm based 
+                    I'm working to expand the domain of computation. I'm based 
                     in the greater New York and Washington D.C. areas and 
                     am currently studying at Princeton University. I have 
                     interests in artificial intelligence, quantum computing,
