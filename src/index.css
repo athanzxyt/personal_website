@@ -12,7 +12,7 @@
 }
 
 body {
-  @apply sm:overflow-hidden;
+  @apply overflow-hidden;
 }
 
 ::selection {
