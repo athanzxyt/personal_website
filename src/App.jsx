@@ -7,7 +7,7 @@ import ContentPanel from './components/ContentPanel';
 
 function App() {
   return (
-    <div className="bg-background p-5 pb-14 sm:pb-0 h-screen w-full">
+    <div className="bg-background p-5 pb-10 sm:pb-0 h-screen w-full">
       <div className="flex border-2 border-primary p-5 h-full w-auto">
         <div className="h-full 
                         flex flex-col
