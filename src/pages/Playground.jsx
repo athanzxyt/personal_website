@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 function Playground() {
     return (
         <motion.div 
-            className="flex h-full justify-center sm:justify-end items-center sm:items-end"
+            className="flex flex-grow h-full justify-center sm:justify-end items-center sm:items-end"
             initial={{ opacity: 0, transition: { duration: 0.5 } }}
             animate={{ opacity: 1, transition: { duration: 1, ease: "easeIn" } }}
             exit={{ opacity: 0, transition: { duration: 0.5 } }}
