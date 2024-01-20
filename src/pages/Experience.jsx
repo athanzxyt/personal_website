@@ -32,9 +32,9 @@ function Experience() {
     return (
         <motion.div 
             className="flex flex-col"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, transition: { duration: 0.5 } }}
+            animate={{ opacity: 1, transition: { duration: 1, ease: "easeIn" } }}
+            exit={{ opacity: 0, transition: { duration: 0.5 } }}
         >
             <h1 className="text-4xl sm:text-6xl font-syne font-bold text-left custom-grad pb-4">Education</h1>
             <ul className="list-none p-0 m-0">

@@ -29,13 +29,13 @@ function Home() {
         // </div>
 
         <motion.div 
-            className="flex items-center justify-center h-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            className="flex flex-col sm:flex-row items-center justify-center h-full max-h-full w-full"
+            initial={{ opacity: 0, transition: { duration: 0.5 } }}
+            animate={{ opacity: 1, transition: { duration: 1, ease: "easeIn" } }}
+            exit={{ opacity: 0, transition: { duration: 0.5 } }}
         >
-            <img src="/pfp2.png" alt="A Picture of Me!" className="w-1/2 h-3/4 object-cover"/>
-            <div className="m-8 w-1/4">
+            <img src="/pfp2.png" alt="A Picture of Me!" className="sm:w-1/2 sm:h-3/4 sm:object-cover"/>
+            <div className="m-8 sm:w-1/4">
                 <p className="text-xl font-dm">
                     <span className="font-bold font-syne text-secondary text-6xl">
                         Who?
