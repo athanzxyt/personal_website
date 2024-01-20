@@ -12,7 +12,7 @@
 }
 
 body {
-  @apply overflow-hidden;
+  @apply sm:overflow-hidden;
 }
 
 ::selection {
@@ -22,6 +22,11 @@ body {
 .custom-grad {
   /* @apply bg-gradient-to-r from-[#06b178] via-[#a3b32e] to-[#04724d] inline-block text-transparent bg-clip-text; */
   @apply text-secondary;
+}
+
+.h-static {
+  height: -moz-available;          /* WebKit-based browsers will ignore this. */
+  height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
 }
 
 /* Nav Items */
