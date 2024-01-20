@@ -29,7 +29,7 @@ function Home() {
         // </div>
 
         <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-center h-full max-h-full w-full"
+            className="flex flex-col sm:flex-row items-center sm:justify-center h-full w-full"
             initial={{ opacity: 0, transition: { duration: 0.5 } }}
             animate={{ opacity: 1, transition: { duration: 1, ease: "easeIn" } }}
             exit={{ opacity: 0, transition: { duration: 0.5 } }}

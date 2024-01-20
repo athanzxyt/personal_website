@@ -8,7 +8,7 @@ function Header() {
         <div className="text-center 
                         sm:text-start">
             <h1 className="font-syne font-bold custom-grad
-                           text-6xl leading-tight pb-2
+                           text-4xl leading-tight pb-2
                            sm:text-8xl sm:leading-tight sm:pb-5">Athan Zhang</h1>
             <TypeAnimation
                 sequence={[

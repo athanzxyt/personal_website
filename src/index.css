@@ -63,7 +63,7 @@ body {
 /* Playground Page */
 
 .playground-li {
-  @apply font-syne font-bold text-3xl text-right;
+  @apply font-syne font-bold text-lg sm:text-3xl text-center pb-4 sm:text-right;
 }
 
 .playground-li:hover {
