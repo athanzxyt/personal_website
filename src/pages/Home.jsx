@@ -51,7 +51,7 @@ function Home() {
                     <br />
                     <span className="font-bold">
                     In some shape or form, I've been working on these goals
-                    since I was 15 years old. 
+                    since I was 14 years old. 
                     </span>
                 </p>
             </div>
