@@ -7,6 +7,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Notes
+## TODO
 
-in App.jsx: Currently have outer box padding to be 5%, make it dynamic.
+- in App.jsx: Currently have outer box padding to be 5%, make it dynamic.
+- Add courses section to education
