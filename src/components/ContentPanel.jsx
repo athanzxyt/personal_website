@@ -8,6 +8,7 @@ import Experience from '../pages/Experience';
 import Playground from '../pages/Playground';
 import Contact from '../pages/Contact';
 import { AnimatePresence } from 'framer-motion';
+import Booklist from '../pages/Booklist';
 
 function ContentPanel() {
     const location = useLocation();
@@ -19,6 +20,7 @@ function ContentPanel() {
             <Route exact path="/projects" element={<Projects />} />
             <Route exact path="/experience" element={<Experience />} />
             <Route exact path="/playground" element={<Playground />} />
+            <Route exact path="/playground/booklist" element={<Booklist />} />
             <Route exact path="/contact" element={<Contact />} />
         </Routes>
         </AnimatePresence>
