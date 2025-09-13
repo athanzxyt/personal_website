@@ -1,9 +1,16 @@
 [
     {
+        "company": "Five Rings",
+        "title": "Quantitative Developer Intern",
+        "location": "New York, NY",
+        "current": false,
+        "imgPath": "/logos/frcLogo.png"
+    },
+    {
         "company": "Vytal AI",
         "title": "Founding Engineer",
         "location": "Remote",
-        "current": true,
+        "current": false,
         "imgPath": "/logos/vytalLogo.png"
     },
     {
