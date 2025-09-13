@@ -20,16 +20,16 @@ export default function Home() {
         <div className='text-sm md:text-base text-zinc-500'>
           <p>
             {`I'm currently an undergraduate at Princeton in an accelerated
-            track studying Computer Science. Currently I'm helping build
-            backend machine learning pipelines and advising with strategy at `}
-            <Link href='https://vytal.ai' className="hover:text-purple-600 font-bold">Vytal</Link>
-            {`, a startup I helped start with a few friends back in high school.`}
+            track studying Computer Science with minors in Cognitive Science and Statistics. Currently, I'm working
+            on an agentic research tool to help academics streamline paper-making as a side project. Previously, I've
+            helped build machine learning pipelines  at Vytal, a startup I helped start with a few friends back in
+            high school.`}
             <br />
             <br />
             {`On campus, I'm primarily involved with pursuing research in the
             field of Human-Computer Interaction and working at `}
-            <Link href='pvc.vc' className="hover:text-orange-400 font-bold">Prospect Student Ventures</Link>
-            {` (Princeton's student-run VC), as the Director of Founder Support. 
+            <Link href='pvc.vc' className="hover:text-orange-400 font-bold">Princeton Student Ventures</Link>
+            {` (Princeton's student-run VC), as a Managing Director. 
             In my free time, I enjoying training for triathlons (swim, bike, run),
             lifting, `}
             <Link href='https://www.goodreads.com/athanzhang' className="hover:text-red-600 font-bold">reading</Link>
@@ -125,10 +125,10 @@ export default function Home() {
           <ProjectCards projects={projects} featuredOnly={true} />
         </div>
 
-        <div>
+        {/* <div>
           <h1 className="font-serif text-lg md:text-2xl pb-3">Currently Working At</h1>
           <WorkHistoryBlocks workHistory={workHistory} currentOnly={true} />
-        </div>
+        </div> */}
       </main>    
     </>
   );
