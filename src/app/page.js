@@ -1,135 +1,130 @@
-// src/app/page.js
-
-import Image from "next/image";
-import Link from "next/link";
-
-import ProjectCards from "@/components/ProjectCards";
-import WorkHistoryBlocks from "@/components/WorkHistoryBlocks";
-import getProjectsMetadata from "@/utils/getProjectsMetadata";
 import getExperienceMetadata from "@/utils/getExperienceMetadata";
-import Navbar from "@/components/Navbar";
 
-export default function Home() {
-  const projects = getProjectsMetadata();
+const generateDescriptionSegments = (text = "") => {
+  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const segments = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = linkPattern.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      segments.push({ type: "text", value: text.slice(lastIndex, match.index) });
+    }
+    segments.push({ type: "link", value: match[1], href: match[2] });
+    lastIndex = linkPattern.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    segments.push({ type: "text", value: text.slice(lastIndex) });
+  }
+
+  if (!segments.length) {
+    return [{ type: "text", value: text }];
+  }
+
+  return segments;
+};
+
+export default function HomePage() {
   const workHistory = getExperienceMetadata({ experienceType: "workHistory" });
 
   return (
-    <>
-      <Navbar />
-      <main className="flex flex-col">
-        <div className='text-sm md:text-base text-zinc-500'>
+    <div className="space-y-16">
+      <section className="space-y-4" id="about">
+        <h1 className="text-4xl font-semibold tracking-tight">Athan Zhang</h1>
+        <div className="space-y-4 text-base leading-relaxed text-neutral-600">
           <p>
-            {`I'm currently an undergraduate at Princeton in an accelerated
-            track studying Computer Science with minors in Cognitive Science and Statistics. Currently, I'm working
-            on an agentic research tool to help academics streamline paper-making as a side project. Previously, I've
-            helped build machine learning pipelines  at Vytal, a startup I helped start with a few friends back in
-            high school.`}
-            <br />
-            <br />
-            {`On campus, I'm primarily involved with pursuing research in the
-            field of Human-Computer Interaction and working at `}
-            <Link href='pvc.vc' className="hover:text-orange-400 font-bold">Princeton Student Ventures</Link>
-            {` (Princeton's student-run VC), as a Managing Director. 
-            In my free time, I enjoying training for triathlons (swim, bike, run),
-            lifting, `}
-            <Link href='https://www.goodreads.com/athanzhang' className="hover:text-red-600 font-bold">reading</Link>
-            {` (or at least trying to), and `}
-            <Link href='x.com' className="hover:text-blue-500 font-bold">following</Link>
-            {` the latest trends in tech.`}
+            I’m a Founder and the CEO of Coevolved, a small, technical team backed by Y Combinator working to redefine
+            agentic systems.
+          </p>
+          <p>
+            I’m an effectual, pragmatic engineer with an eye for design. I studied Computer Science at Princeton and
+            was the only one in my class to skip a grade. I’ve been coding since I was 11, and I’m still obsessed with
+            building things that make a tangible difference for the people who use them.
+          </p>
+          <p>
+            I’ve been fortunate to have a strong upbringing and education. I try to pay it forward by treating that
+            privilege as responsibility, and meeting it with the tenacity to build and the resolve to contribute.
+          </p>
+          <p>
+            Outside of work, I love cooking, training for triathlons, and mentoring wherever I can.
           </p>
         </div>
+      </section>
 
-        <div className="grid grid-cols-2 grid-rows-4 md:grid-rows-3 md:grid-cols-3 gap-4 my-8">
-        <div className="relative group h-40">
-          <Image
-            alt="My team and I at the 2023 Wharton Investment Competition finals, where we won 1st place"
-            src={'/gallery/investmentfinals.jpg'}
-            fill
-            sizes="(max-width: 768px) 213px, 33vw"
-            priority
-            className="rounded-lg object-cover"
-          />
-          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-white w-3/4 text-xs">My team and I at the 2023 Wharton Investment Competition finals, where we won 1st place</span>
-          </div>
-        </div>
-        <div className="relative group md:row-span-2 row-span-1">
-          <Image
-            alt="Me and a friend at our high school graduation"
-            src={'/gallery/hsgraduation.jpg'}
-            fill
-            sizes="(max-width: 768px) 213px, 33vw"
-            priority
-            className="rounded-lg object-cover object-top sm:object-center"
-          />
-          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-white w-3/4 text-xs">Me and a friend at our high school graduation</span>
-          </div>
-        </div>
-        <div className="relative group">
-          <Image
-            alt="Me and the Singapore TigerLaunch delegation visiting a buddhist temple"
-            src={'/gallery/temple.jpg'}
-            fill
-            sizes="(max-width: 768px) 213px, 33vw"
-            priority
-            className="rounded-lg object-cover"
-          />
-          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-white w-3/4 text-xs">Me and the Singapore TigerLaunch delegation visiting a buddhist temple</span>
-          </div>
-        </div>
-        <div className="relative group row-span-2">
-          <Image
-            alt="Me at IBM's quantum computing lab in New York"
-            src={'/gallery/quantumcomputer.jpg'}
-            fill
-            sizes="(max-width: 768px) 213px, 33vw"
-            priority
-            className="rounded-lg object-cover sm:object-center"
-          />
-          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-white w-3/4 text-xs">Me at IBM's quantum computing lab in New York</span>
-          </div>
-        </div>
-        <div className="relative group row-span-2">
-          <Image
-            alt="My friends and I finally becoming official Computer Science majors"
-            src={'/gallery/majordeclaration.jpg'}
-            fill
-            sizes="(max-width: 768px) 213px, 33vw"
-            priority
-            className="rounded-lg object-cover"
-          />
-          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-white w-3/4 text-xs">My friends and I finally becoming official Computer Science majors</span>
-          </div>
-        </div>
-        <div className="relative group h-40">
-          <Image
-            alt="Me moderating a startup panel at the 2023 TigerLaunch finals"
-            src={'/gallery/moderating.jpg'}
-            fill
-            sizes="(max-width: 768px) 213px, 33vw"
-            priority
-            className="rounded-lg object-cover"
-          />
-          <div className="absolute inset-0 rounded-lg bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-white w-3/4 text-xs">Me moderating a startup panel at the 2023 TigerLaunch finals</span>
-          </div>
-        </div>
-      </div>
+      <section className="mt-4">
+          <h2 className="mb-4 text-lg font-semibold">Meaningful Experience</h2>
 
-        <div>
-          <h1 className="font-serif text-lg md:text-2xl pb-3">Featured Projects</h1>
-          <ProjectCards projects={projects} featuredOnly={true} />
-        </div>
+          <ol className="relative border-gray-300 border-s">
+              {workHistory.map((role, index) => {
+                  const segments = generateDescriptionSegments(role.description);
 
-        {/* <div>
-          <h1 className="font-serif text-lg md:text-2xl pb-3">Currently Working At</h1>
-          <WorkHistoryBlocks workHistory={workHistory} currentOnly={true} />
-        </div> */}
-      </main>    
-    </>
+                  return (
+                  <li key={`${role.date}-${index}`} className="mb-4 ms-4 last:mb-0">
+                      <div
+                          className={[
+                              "absolute w-3 h-3 rounded-full mt-2 -start-1.5 border border-white",
+                              role.current ? "bg-orange-600" : "bg-gray-200",
+                          ].join(" ")}
+                      />
+
+                      <time
+                          className={[
+                              "mb-1 text-xs leading-none",
+                              role.current ? "text-orange-600" : "text-gray-500",
+                          ].join(" ")}
+                      >
+                          {role.current ? "Today" : role.date}
+                      </time>
+
+                      <p className="text-base text-gray-900">
+                          {segments.map((segment, segmentIndex) =>
+                              segment.type === "link" ? (
+                                  <a
+                                      key={`${role.date}-${segmentIndex}`}
+                                      href={segment.href}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="underline transition-colors underline-offset-4 hover:text-gray-600"
+                                  >
+                                      {segment.value}
+                                  </a>
+                              ) : (
+                                  <span key={`${role.date}-${segmentIndex}`}>{segment.value}</span>
+                              )
+                          )}
+                      </p>
+                 </li>
+             );
+             })}
+         </ol>
+     </section>
+
+      <section className="space-y-4">
+        <h2 className="mb-4 text-lg font-semibold">Contact</h2>
+        <div className="space-y-3 text-base text-neutral-600">
+          <p>
+            For professional inquires, you can reach me at
+            <span className="block px-1.5 py-0.5 mt-1 text-sm rounded w-fit bg-neutral-200 text-neutral-900">
+              athan [at] coevolved [dot] ai
+            </span>
+          </p>
+          <p>
+            For anything more personal or reflective, send a note to
+            <span className="block px-1.5 py-0.5 mt-1 text-sm rounded w-fit bg-neutral-200 text-neutral-900">
+              hello [at] athan [dot] sh
+            </span>
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-4 text-sm font-medium text-neutral-900">
+          <a href="https://www.linkedin.com/in/athanzhang/" className="underline underline-offset-4">
+            LinkedIn
+          </a>
+          <a href="https://github.com/athanzxyt" className="underline underline-offset-4">
+            GitHub
+          </a>
+        </div>
+      </section>
+    </div>
   );
 }
