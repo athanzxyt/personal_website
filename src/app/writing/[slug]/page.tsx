@@ -134,7 +134,7 @@ export default async function BlogPage({ params }: PageProps) {
         },
       },
       img: {
-        component: ({ src, alt, ...props }: { src?: string; alt?: string; [key: string]: unknown }) => {
+        component: ({ src, alt, ...props }: { src?: string; alt?: string;[key: string]: unknown }) => {
           if (!src) return null;
           return (
             <div className="relative my-6 w-full" style={{ minHeight: "200px" }}>
