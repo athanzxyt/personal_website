@@ -1,13 +1,18 @@
+import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Athan Zhang",
   description: "Athan's Personal Website",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const year = new Date().getFullYear();
 
   return (

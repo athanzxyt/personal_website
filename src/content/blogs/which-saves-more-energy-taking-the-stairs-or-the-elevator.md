@@ -1,6 +1,5 @@
 ---
-title: "Which Saves More Energy: Taking the Stairs or the Elevator?"
-subtitle: "Are you really being more green by climbing those floors"
+title: "Does Taking the Stairs Save More Energy?"
 date: August 24th, 2024
 ---
 

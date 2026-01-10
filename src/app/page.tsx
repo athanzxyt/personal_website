@@ -1,8 +1,12 @@
 import experiences from "@/content/experiences.json";
 
-const generateDescriptionSegments = (text = "") => {
+type TextSegment = { type: "text"; value: string };
+type LinkSegment = { type: "link"; value: string; href: string };
+type Segment = TextSegment | LinkSegment;
+
+const generateDescriptionSegments = (text = ""): Segment[] => {
   const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
-  const segments = [];
+  const segments: Segment[] = [];
   let lastIndex = 0;
   let match;
 
@@ -35,18 +39,18 @@ export default function HomePage() {
         <h1 className="text-4xl font-semibold tracking-tight">Athan Zhang</h1>
         <div className="space-y-4 text-base leading-relaxed text-neutral-600">
           <p>
-            I'm a Founder and the CEO of Coevolved, a small, technical team
+            I&apos;m a Founder and the CEO of Coevolved, a small, technical team
             backed by Y Combinator working to redefine agentic systems.
           </p>
           <p>
-            I'm an effectual, pragmatic engineer with an eye for design. I
+            I&apos;m an effectual, pragmatic engineer with an eye for design. I
             studied Computer Science at Princeton and was the only one in my
-            class to skip a grade. I've been coding since I was 12, and I'm
+            class to skip a grade. I&apos;ve been coding since I was 12, and I&apos;m
             still obsessed with building things that make a tangible difference
             for the people who use them.
           </p>
           <p>
-            I've been fortunate to have a strong upbringing and education. I try
+            I&apos;ve been fortunate to have a strong upbringing and education. I try
             to pay it forward by treating that privilege as responsibility, and
             meeting it with the tenacity to build and the resolve to contribute.
           </p>

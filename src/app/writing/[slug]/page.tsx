@@ -1,11 +1,31 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import type { Metadata } from "next";
 import Markdown from "markdown-to-jsx";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
-function getBlogsMetadata() {
+interface BlogMetadata {
+  title: string;
+  subtitle: string;
+  date: string;
+  slug: string;
+}
+
+interface BlogContent {
+  title: string;
+  date: string;
+  content: string;
+  [key: string]: unknown;
+}
+
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+function getBlogsMetadata(): BlogMetadata[] {
   const blogsDirectory = path.join(process.cwd(), "src/content/blogs");
   const filenames = fs.readdirSync(blogsDirectory);
   const markdownBlogs = filenames.filter((file) => file.endsWith(".md"));
@@ -24,12 +44,12 @@ function getBlogsMetadata() {
   });
 }
 
-function timeAgo(dateString) {
+function timeAgo(dateString: string): string {
   const cleanDateString = dateString.replace(/(\d+)(st|nd|rd|th)/, "$1");
   const date = new Date(cleanDateString);
   const now = new Date();
 
-  const diffInMs = now - date;
+  const diffInMs = now.getTime() - date.getTime();
   const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
 
   if (diffInDays < 30) {
@@ -45,7 +65,7 @@ function timeAgo(dateString) {
   return `${diffInYears}y ago`;
 }
 
-function getBlogContent(slug) {
+function getBlogContent(slug: string): BlogContent | null {
   const filePath = `src/content/blogs/${slug}.md`;
 
   if (!fs.existsSync(filePath)) {
@@ -57,21 +77,22 @@ function getBlogContent(slug) {
 
   return {
     ...data,
+    title: data.title,
+    date: data.date,
     content,
   };
 }
 
-export const generateStaticParams = async () => {
+export async function generateStaticParams() {
   const blogs = getBlogsMetadata();
   return blogs.map((blog) => ({
-    params: {
-      slug: blog.slug,
-    },
+    slug: blog.slug,
   }));
-};
+}
 
-export async function generateMetadata({ params }) {
-  const post = getBlogContent(params.slug);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogContent(slug);
   const title = post?.title ? `${post.title}` : "Writing";
 
   return {
@@ -79,8 +100,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function BlogPage(props) {
-  const slug = props.params.slug;
+export default async function BlogPage({ params }: PageProps) {
+  const { slug } = await params;
   const post = getBlogContent(slug);
 
   if (!post) {
@@ -112,13 +133,30 @@ export default function BlogPage(props) {
           className: "blog-a",
         },
       },
+      img: {
+        component: ({ src, alt, ...props }: { src?: string; alt?: string; [key: string]: unknown }) => {
+          if (!src) return null;
+          return (
+            <div className="relative my-6 w-full" style={{ minHeight: "200px" }}>
+              <Image
+                src={src}
+                alt={alt || ""}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 768px"
+                {...props}
+              />
+            </div>
+          );
+        },
+      },
     },
   };
 
   return (
     <article className="space-y-6">
-      <Link href="/writing" className="text-xs uppercase tracking-[0.3em] text-neutral-400">
-        ← Back to writing
+      <Link href="/writing" className="text-xs text-neutral-400">
+        ← Back to Writing
       </Link>
       <div className="space-y-2">
         <h1 className="text-4xl font-semibold leading-snug">{post.title}</h1>

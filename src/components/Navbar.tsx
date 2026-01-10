@@ -3,7 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = [
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+const links: NavLink[] = [
   { href: "/", label: "About" },
   { href: "/writing", label: "Writing" },
   { href: "/gallery", label: "Gallery" },
