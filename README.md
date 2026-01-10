@@ -18,12 +18,8 @@ https://www.athanzhang.com/
 To run this project in developer mode run
 
 ```bash
-  npm run dev
+  pnpm dev
 ```
-
-## Future Work
-
-- Blog Counter [Inspiration by Leerob](https://github.com/leerob/leerob.io/blob/main/app/blog/%5Bslug%5D/page.tsx)
 
 ## License
 
