@@ -7,16 +7,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Archivo', 'sans-serif'],
-        'serif': ['Lora', 'serif'],
-        // 'serif': ['Tenor Sans', 'sans-serif'],
+        sans: ['Chivo Mono', 'monospace'],
+        mono: ['Chivo Mono', 'monospace'],
       },
       colors: {
-        'primary': '#0A0A0A',
-        'secondary': '#0D8746',
-        'tertiary': '#FDFDFD'
+        primary: '#0A0A0A',
+        secondary: '#0D8746',
+        tertiary: '#FDFDFD',
       },
     },
   },
   plugins: [],
-}
+};
