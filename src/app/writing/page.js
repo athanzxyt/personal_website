@@ -1,9 +1,30 @@
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import Link from "next/link";
-import getBlogsMetadata from "@/utils/getBlogsMetadata";
 
 export const metadata = {
   title: "Writing | Athan Zhang",
 };
+
+function getBlogsMetadata() {
+  const blogsDirectory = path.join(process.cwd(), "src/content/blogs");
+  const filenames = fs.readdirSync(blogsDirectory);
+  const markdownBlogs = filenames.filter((file) => file.endsWith(".md"));
+
+  return markdownBlogs.map((filename) => {
+    const filePath = path.join(blogsDirectory, filename);
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    const matterResult = matter(fileContents);
+
+    return {
+      title: matterResult.data.title,
+      subtitle: matterResult.data.subtitle,
+      date: matterResult.data.date,
+      slug: filename.replace(".md", ""),
+    };
+  });
+}
 
 const cleanDate = (dateString) =>
   new Date(dateString.replace(/(\d+)(st|nd|rd|th)/, "$1"));

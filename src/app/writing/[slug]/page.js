@@ -1,11 +1,49 @@
 import fs from "fs";
+import path from "path";
 import matter from "gray-matter";
 import Markdown from "markdown-to-jsx";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import getBlogsMetadata from "@/utils/getBlogsMetadata";
-import { timeAgo } from "@/utils/dateDifference";
+function getBlogsMetadata() {
+  const blogsDirectory = path.join(process.cwd(), "src/content/blogs");
+  const filenames = fs.readdirSync(blogsDirectory);
+  const markdownBlogs = filenames.filter((file) => file.endsWith(".md"));
+
+  return markdownBlogs.map((filename) => {
+    const filePath = path.join(blogsDirectory, filename);
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    const matterResult = matter(fileContents);
+
+    return {
+      title: matterResult.data.title,
+      subtitle: matterResult.data.subtitle,
+      date: matterResult.data.date,
+      slug: filename.replace(".md", ""),
+    };
+  });
+}
+
+function timeAgo(dateString) {
+  const cleanDateString = dateString.replace(/(\d+)(st|nd|rd|th)/, "$1");
+  const date = new Date(cleanDateString);
+  const now = new Date();
+
+  const diffInMs = now - date;
+  const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+
+  if (diffInDays < 30) {
+    return `${diffInDays}d ago`;
+  }
+
+  const diffInMonths = Math.floor(diffInDays / 30);
+  if (diffInMonths < 12) {
+    return `${diffInMonths}mo ago`;
+  }
+
+  const diffInYears = Math.floor(diffInMonths / 12);
+  return `${diffInYears}y ago`;
+}
 
 function getBlogContent(slug) {
   const filePath = `src/content/blogs/${slug}.md`;
