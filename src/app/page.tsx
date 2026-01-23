@@ -40,7 +40,7 @@ export default function HomePage() {
         <div className="space-y-4 text-base leading-relaxed text-neutral-600">
           <p>
             I&apos;m a Founder and the CEO of Coevolved, a small, technical team
-            backed by Y Combinator working to redefine agentic systems.
+            backed by Y Combinator working to streamline mortgage loan origination.
           </p>
           <p>
             I&apos;m an effectual, pragmatic engineer with an eye for design. I
