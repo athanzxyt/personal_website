@@ -39,8 +39,17 @@ export default function HomePage() {
         <h1 className="text-4xl font-semibold tracking-tight">Athan Zhang</h1>
         <div className="space-y-4 text-base leading-relaxed text-neutral-600">
           <p>
-            I&apos;m a Founder and the CEO of Coevolved, a small, technical team
-            backed by Y Combinator working to streamline mortgage loan origination.
+            I&apos;m a Founder and the CEO of{" "}
+            <a
+              href="https://copperlane.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline transition-colors underline-offset-4 hover:text-gray-600"
+            >
+              Copperlane
+            </a>
+            , a small, technical team backed by Y Combinator working to
+            streamline mortgage loan origination.
           </p>
           <p>
             I&apos;m an effectual, pragmatic engineer with an eye for design. I
@@ -117,7 +126,7 @@ export default function HomePage() {
           <p>
             For professional inquires, you can reach me at
             <span className="block px-1.5 py-0.5 mt-1 text-sm rounded w-fit bg-neutral-200 text-neutral-900">
-              athan [at] coevolved [dot] ai
+              athan [at] copperlane [dot] ai
             </span>
           </p>
           <p>
